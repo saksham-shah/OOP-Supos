@@ -12,13 +12,13 @@ public class TailRecursion {
         addTailRec(0, -1, 0);
     }
 
-    public static int addRec(int a, int b) {
+    static int addRec(int a, int b) {
         if (b == 0) return a;
 
         return 1 + addRec(a, b - 1);
     }
 
-    public static int addTailRec(int a, int b, int total) {
+    static int addTailRec(int a, int b, int total) {
         if (b == 0) return a + total;
 
         // This is tail recursive as the return statement only references a call to itself
